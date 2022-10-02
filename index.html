@@ -5,9 +5,32 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Vite App</title>
+    <style type="text/tailwindcss">
+        @tailwind base;
+        @tailwind components;
+        @tailwind utilities;
+    @layer components {
+        .field {
+            @apply bg-gray-100 rounded-md p-1 my-2 w-80 border-2 border-gray-400 focus:border-blue-600 transition-all invalid:border-red-600 focus:bg-gray-200
+        }
+    }</style>
+    <script>
+        tailwind.config = {
+    content: ["./index.html",
+        "./src/**/*.{js,ts,jsx,tsx}"
+    ],
+    theme: {
+        backgroundImage: {
+            'backg': "url(theo-vLoexGvJ20k-unsplash.jpg)"
+        },
+        extend: {},
+    },
+    plugins: [],
+}
+    </script>
+
 </head>
 
 <body class="h-screen w-screen flex">
