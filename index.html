@@ -11,9 +11,12 @@
         @tailwind base;
         @tailwind components;
         @tailwind utilities;
+        input, select, textarea, button {
+outline: none !important;
+}
     @layer components {
         .field {
-            @apply bg-gray-100 rounded-md p-1 my-2 w-80 border-2 border-gray-400 focus:border-blue-600 transition-all invalid:border-red-600 focus:bg-gray-200
+            @apply bg-gray-100 rounded-md p-1 my-2 w-80 border border-gray-400 focus:border-blue-600 transition-all invalid:border-red-600 focus:bg-gray-200  focus:drop-shadow-md
         }
     }</style>
     <script>
@@ -46,21 +49,21 @@
         <form action="" method="post">
             <div class="grid grid-cols-2">
                 <legend class="col-span-2 mx-16 font-medium text-2xl text-gray-800 mt-10 mb-6">Let's do this!</legend>
-                <div class="flex flex-col mx-10 font-medium text-gray-800 text-base"> <label for="fname">FIRST NAME</label>
-                    <input class="field" type="text" name="fname" id="fname"></div>
+                <div class="flex flex-col mx-10 font-medium text-gray-800 text-base"> <label for="fname" >FIRST NAME</label>
+                    <input class="field" type="text" name="fname" id="fname" placeholder="Please enter your first name"></div>
                 <div class="flex flex-col mx-10 font-medium text-gray-800 text-base"> <label for="lname">LAST NAME</label>
-                    <input class="field" type="text" name="lname" id="lname"></div>
+                    <input class="field" type="text" name="lname" id="lname" placeholder="Please enter your last name"></div>
                 <div class="flex flex-col mx-10 font-medium text-gray-800 text-base"> <label for="email">EMAIL</label>
-                    <input class="field" type="email" name="email" id="email"></div>
+                    <input class="field" type="email" name="email" id="email" placeholder="Please enter your email"></div>
                 <div class="flex flex-col mx-10 font-medium text-gray-800 text-base"> <label for="phoneNum">PHONE NUMBER </label>
-                    <input class="field" type="tel" name="phoneNum" id="phoneNum"></div>
+                    <input class="field" type="tel" name="phoneNum" id="phoneNum" placeholder="Please enter your phone number"></div>
                 <div class="flex flex-col mx-10 font-medium text-gray-800 text-base"> <label for="pass">PASSWORD</label>
-                    <input class="field" type="password" name="pass" id="pass"></div>
+                    <input class="field" type="password" name="pass" id="pass" placeholder="Must be at least 8 characters long"></div>
                 <div class="flex flex-col mx-10 font-medium text-gray-800 text-base"> <label for="cpass">CONFIRM PASSWORD</label>
-                    <input class="field" type="password" name="cpass" id="cpass"></div>
+                    <input class="field" type="password" name="cpass" id="cpass" placeholder="Must be at least 8 characters long"></div>
             </div>
 
-            <button class="my-12 mx-20 bg-blue-300 w-40 h-12 rounded-lg border-2 border-blue-400 hover:bg-blue-400">Create Account</button>
+            <button class="my-12 mx-20 bg-blue-300 w-40 h-12 rounded-lg border border-blue-400 hover:bg-blue-400">Create Account</button>
             <p class="font-medium text-xl text-gray-800 mx-20">Already have an account?
                 <a class="text-blue-800 hover:text-violet-800 " href="">Log in</a>
             </p>
